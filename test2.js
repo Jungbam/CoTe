@@ -1,3 +1,4 @@
+// 나머지가 1이 되는 수 찾기
 function solution(n) {
   answerList = []
   if (n < 3 || n >= 1000000) {
