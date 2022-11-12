@@ -1,3 +1,5 @@
+// 삼총사 문제
+
 function solution(number) {
   let answer = 0
   // 배열 내에서 3개를 뽑아서 그걸로 배열 조합 만들기
