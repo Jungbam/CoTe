@@ -1,3 +1,4 @@
+// 제일 작은수 제거하기
 function solution(arr) {
   if (arr.length > 1) {
     const a = Math.min(...arr)

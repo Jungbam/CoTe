@@ -1,3 +1,5 @@
+// 정수 내림차순
+
 function solution(n) {
   const strN = String(n)
   var answer = [...strN]
