@@ -2,8 +2,12 @@
 
 // 1. 먼저 사이즈의 각자를 정렬시킨다.(큰수가 앞으로 나오도록)
 // 2. 각 앞자리와 뒷자리의 최대값을 골라서 곱하면 된다.
+
+// 여러개의 값을 묶어서 묶음 처리 => 배열
+// 묶음한 애를 걸러야 된다. => 배열 => 필터
+// 묶음한 애를 가지고 새로운 집단을 만들어야된다 => 맵
 function solution(sizes) {
-  const sortedArray = sizes.map((el) => el.sort((a, b) => b - a))
+  sizes.map((el) => el.sort((a, b) => b - a))
   const processArray1 = []
   const processArray2 = []
   for (i of sizes) {
