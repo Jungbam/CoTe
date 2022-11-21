@@ -1,25 +1,28 @@
+// 모의고사
 function solution(answers) {
-  let answer = [[], [], []]
+  const answer = []
   const Mems = [
     [1, 2, 3, 4, 5],
     [2, 1, 2, 3, 2, 4, 2, 5],
-    [2, 1, 2, 3, 2, 4, 2, 5],
+    [3, 3, 1, 1, 2, 2, 4, 4, 5, 5],
   ]
-  for (let j = 0; j < Mems.length; j++) {
-    for (let i = 0; i < answers.length; i++) {
-      if (i >= Mems[j].length - 1) {
-        i = 0
-        continue
-      }
-      if (Mems[j][i] === answers[i]) {
-        answer[j].push(i)
-      }
-    }
-  }
-  const Value = [answer[0].length, answer[1].length, answer[2].length]
 
+  for (let i = 0; i < 3; i++) {
+    const result = answers.filter((e, index) => e === result[index % i.length])
+    console.log(result)
+  }
+  const max = Math.max(a1c, a2c, a3c)
+
+  if (a1c === max) {
+    answer.push(1)
+  }
+  if (a2c === max) {
+    answer.push(2)
+  }
+  if (a3c === max) {
+    answer.push(3)
+  }
   return answer
 }
-
-const answers = [2, 1, 2, 3, 2, 4, 2, 5]
-console.log(solution(answers))
+const answers = [1, 2, 3, 4, 5]
+solution(answers)
