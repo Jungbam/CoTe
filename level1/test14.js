@@ -3,27 +3,27 @@
 function solution(n) {
   let answer = 0
   const value = Math.sqrt(n)
-  const ab = new Array(n + 1).fill(true)
+  const ab = new Array(n + 1).fill(0)
 
   // i는 루트값까지 반복할께.
   // 그 안에서 어떤 값의 곱을 제외할께.
   // 근데 그 곱은 루트값 이전의 값을 곱한걸 제외하면 나와.
   for (let i = 2; i <= value; i++) {
-    if (ab[i] === false) continue
+    if (ab[i] === 1) continue
 
     for (let z = 2; z <= n; z++) {
       if (i * z > n) continue
-      ab[i * z] = false
+      ab[i * z] = 1
     }
   }
   for (let i = 2; i <= n; i++) {
-    if (ab[i] === true) {
+    if (ab[i] === 0) {
       answer++
     }
   }
   return answer
 }
-console.log(solution(5))
+console.log(solution(21))
 
 // function solution(n) {
 //   const answer = []
