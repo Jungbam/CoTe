@@ -1,12 +1,16 @@
-function solution(n) {
-  const num = [...String(n)]
-  // for문을 만들어서(인덱스가 있는 타입으로 바꾸겠다.=>
-  // 배열, String) n 값의 숫자를 돌아가면서 인식을 시킨다.
-  num.sort((a, b) => {
-    return b - a
-  })
-  const numValue = num.join('')
-  return Number(numValue)
+function solution(a, b) {
+  // b[0]a[0] +   b[1]a[1]  +   b[2]a[2]
+  let answer = 0
+  for (let i = 0; i < a.length; i++) {
+    // b[i]=>+ 더하기를 할거고
+    if (b[i] === 'true') {
+      answer += a[i]
+    } else {
+      answer -= a[i]
+    }
+    // b[i]=>- 빼기를 하고싶다.
+  }
+  return answer
 }
 
-console.log(solution(118372))
+solution([1, 2, 3], ['true', 'false', 'true'])
